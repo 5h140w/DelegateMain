@@ -1,5 +1,5 @@
 .navbar{
-    position: absolute;
+    position: sticky;
     top:0;
     width: 100%;
     z-index: 999;
@@ -66,12 +66,21 @@
     }
     .navbar .menu_navbar{
         flex-direction: column;
+        display: none;
     }
     .navbar .menu_navbar>li{
         text-align: center;
         margin: 20px;
     }
     .navbar .btn_navbar{
+        display: none;
         margin: 0 auto;
+    }
+
+    .navbar.open .menu_navbar{
+        display: block;
+    }
+    .navbar.open .btn_navbar{
+        display: block;
     }
 }

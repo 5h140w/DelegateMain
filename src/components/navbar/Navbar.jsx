@@ -1,13 +1,17 @@
 import "./navbar.css"
-import React from 'react'
+import React ,{useState} from 'react'
 
 
 const Navbar = () =>{
+    const [isOpen, setIsOpen] = useState(false)
+    const handleClick = () =>{
+        setIsOpen(!isOpen)
+    }
     return(
-        <nav className="navbar">
+        <nav className={isOpen ? "navbar open" :"navbar"}>
             <div className="right_section">
                 <h1 className="logo_navbar">Lena Instruments</h1>
-                <button className="toggle_button">
+                <button className="toggle_button" onClick={handleClick}>
                     <i className="fas fa-bars"></i>
                 </button>
             </div>
