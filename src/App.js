@@ -6,6 +6,7 @@ import Navbar from './components/navbar/Navbar';
 import SideBar from './components/sidebar/Sidebar';
 import Wrap_main from './components/wrap_main/Wrap_main';
 import Unwrap_main from './components/unwrap_main/Unwrap_main';
+import Delegation_main from "./components/delegation_main/Delegation_main"
 
 function App() {
   const context = React.useContext(AppState)
@@ -17,7 +18,7 @@ function App() {
           <SideBar></SideBar>
         </div>
         <div style={{flex:3, position:"relative"}}>
-          <Unwrap_main></Unwrap_main>
+          <Delegation_main></Delegation_main>
         </div>
       </div>
       
