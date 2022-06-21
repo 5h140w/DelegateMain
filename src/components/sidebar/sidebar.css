@@ -1,0 +1,100 @@
+.sidebar_container{
+    padding: 20px;
+    height: 100%;
+    background-color: #F1F1EF;
+}
+
+.sidebar_container .wallet_content,
+.sidebar_container .coin_section,
+.sidebar_container .statistics_section,
+.sidebar_container .title{
+    margin: 20px;
+}
+
+.sidebar_container .title{
+    font-size: calc((2-1) * 1.2vw + 1rem);
+    font-family: "Lena";
+    font-weight: 500;
+    letter-spacing: 0cm;
+    line-height: 1.4em;
+}
+
+
+.wallet_content .subtitle,
+.coin_section .subtitle ,
+.statistics_section .subtitle{
+    font-family: "Lena";
+    font-weight: 500;
+    letter-spacing: 0cm;
+    color: #777;
+    line-height: 1.4em;
+    font-size: calc((1.1 - 1) * 1.2vw + 1rem);
+}
+
+.address_section .addressContent{
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addressContent .copy_address{
+    border: none;
+    cursor: pointer;
+}
+.addressContent .copy_address:hover{
+    color: #777;
+}
+
+.coin_section .songBird, 
+.coin_section .WsongBird{
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    background-color: white;
+    text-align: center;
+}
+
+.songBird>img ,.WsongBird>img {
+    width: 50px;
+    margin: 0 auto;
+}
+
+.songBird>span , .WsongBird>span{
+    padding: 20px;
+}
+
+.statistics_section .labelInput{
+    margin: 20px 0px;
+}
+.statistics_section input[type="text"].inputtext{
+    padding: 20px 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.statistics_section .statistics_content{
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px 0px;
+}
+
+.statistics_content .unclaimed_rewards,
+.statistics_content .pending_rewards{
+    margin:20px 0px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.sidebar_container .claim_btn{
+    display: block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    width: 150px;
+    margin: 0 auto;
+}
