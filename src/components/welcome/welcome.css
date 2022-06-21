@@ -1,0 +1,23 @@
+.welcome_container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+.welcome_container .welcome_section{
+    text-align: center;
+}
+
+.welcome_section>*{
+    margin : 20px
+}
+
+.welcome_section>button{
+    padding: 20px 40px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}

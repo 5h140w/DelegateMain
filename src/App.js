@@ -2,27 +2,35 @@ import React, { useState, useEffect } from 'react'
 
 import AppState from './AppState'
 import './App.css'
-import Navbar from './components/navbar/Navbar';
-import SideBar from './components/sidebar/Sidebar';
-import Wrap_main from './components/wrap_main/Wrap_main';
-import Unwrap_main from './components/unwrap_main/Unwrap_main';
-import Delegation_main from "./components/delegation_main/Delegation_main"
+import Welcome from './components/welcome/Welcome';
+import { Switch, Route, Redirect, BrowserRouter as Router} from 'react-router-dom';
+import Wrap from './pages/Wrap';
+import Unwrap from './pages/Unwrap';
+
 
 function App() {
   const context = React.useContext(AppState)
+  const connected = context.connected
+  
   return (
-    <div className="app">
-      <Navbar></Navbar>
-      <div style={{display:"flex"}}>
-        <div style={{flex:1}}>
-          <SideBar></SideBar>
-        </div>
-        <div style={{flex:3, position:"relative"}}>
-          <Delegation_main></Delegation_main>
-        </div>
-      </div>
-      
+    <div className='app'>
+      <Router>
+    {
+      connected ? (
+          <Switch>
+            <Route path="/SGB/wrap" component={Wrap}/>
+            <Route path="/SGB/unwrap" component={Unwrap}/>
+            <Route>
+              <Redirect to="/SGB/wrap"/>
+            </Route>
+          </Switch>
+        ) : (
+          <Welcome/>
+      )
+    }
+      </Router>
     </div>
+    
   )
 }
 
