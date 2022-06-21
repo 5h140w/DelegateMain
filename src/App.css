@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.main{
+    display:flex;
+    justify-content: space-between;
+}
+
+.main .left_section{
+    flex:1;
+}
+
+.main .right_section{
+    flex: 2;
+}
