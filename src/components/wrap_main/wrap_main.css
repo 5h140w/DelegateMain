@@ -22,3 +22,9 @@
     color: white;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 992px){
+    .wrap_section{
+        margin: 30px;
+    }
+}
