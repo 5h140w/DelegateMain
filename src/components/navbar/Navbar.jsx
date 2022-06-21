@@ -5,7 +5,12 @@ import React from 'react'
 const Navbar = () =>{
     return(
         <nav className="navbar">
-            <h1 className="logo_navbar">Lena Instruments</h1>
+            <div className="right_section">
+                <h1 className="logo_navbar">Lena Instruments</h1>
+                <button className="toggle_button">
+                    <i className="fas fa-bars"></i>
+                </button>
+            </div>
             <ul className="menu_navbar">
                 <li>
                     <a href="">Wrap</a>
