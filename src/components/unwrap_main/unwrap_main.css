@@ -1,0 +1,24 @@
+.unwrap_section{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.unwrap_section .input_section{
+    width: 65%;
+}
+
+.unwrap_section input[type="text"]{
+    padding: 22px 24px;
+    width: 100%;
+}
+
+.unwrap_section .wrap_btn{
+    padding: 20px 60px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
