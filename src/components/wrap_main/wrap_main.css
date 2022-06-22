@@ -13,7 +13,9 @@
     display: flex;
     align-items: center;
 }
-
+.wrap_section .loading_section>img{
+    height: 300px;
+}
 
 .wrap_section .input_section{
     margin: 0 auto;
@@ -50,11 +52,14 @@
 }
 
 
-.wrap_section .error_section{
+.wrap_section .error_section,
+.wrap_section .success_section{
     text-align: center;
 }
 
-.wrap_section .error_section>*{
+.wrap_section .error_section>*,
+.wrap_section .success_section>*
+{
     margin: 20px 0px;
 }
 

@@ -46,7 +46,7 @@ const Wrap_main = () =>{
             appState.loading ? 
               (
                 <div className='loading_section'>
-                  <img alt="loading" src={loader} className="loading_section"/>
+                  <img alt="loading" src={loader}/>
                 </div>
               )
               : !appState.result ?
