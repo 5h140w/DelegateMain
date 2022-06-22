@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import AppState from '../../AppState'
 import { getSigner, wrap } from '../../logic/web3'
 import "./wrap_main.css"
+import loader from "../../loader.svg"
 
 const Wrap_main = () =>{
     const context = useContext(AppState)
@@ -40,23 +41,52 @@ const Wrap_main = () =>{
 
     return(
         <div className='wrap_section'>
-          <h1> Wrap</h1>
-          <div className='input_section'>
-            <input 
-              type="number" 
-              placeholder="Wrap your SGB"
-              id="wrap_amount"
-              min={0}
-              max={balance-0.5}
-            />
-            <button
-              onClick={setMax}
-            > 
-              Max
-            </button>
-          </div>
-          <button className='wrap_btn'>Wrap</button>
-        </div>
+          {
+            appState.loading ? 
+              (
+                <div className='loading_section'>
+                  <img alt="loading" src={loader} className="loading_section"/>
+                </div>
+              )
+              : !appState.result ?
+              ( <>
+                  <h1> Wrap</h1>
+                  <div className='input_section'>
+                    <input 
+                      type="number" 
+                      placeholder="Wrap your SGB"
+                      id="wrap_amount"
+                      min={0}
+                      max={balance-0.5}
+                    />
+                    <button
+                      className={balance< 0.5 ? "" : "none"}
+                      onClick={setMax}> 
+                      Max
+                    </button>
+                  </div>
+                  <button className='wrap_btn' onClick={WrapTx}>Wrap</button>
+                </>  
+                ) : appState.result.code ?(
+                  <div className='error_section'>
+                    <h1>Error</h1>
+                    <p>{appState.result.data
+                          ? appState.result.data.message || appState.result.message
+                          : appState.result.message}
+                    </p>
+                    <button
+                      className="wrap_btn"
+                      onClick={() => setAppState({ loading: false })}
+                    >
+                      Try again
+                    </button>
+                  </div>
+                ) : (
+                  <button>Go to delegate</button>
+                )
+          }
+
+                  </div>
     )
 }
 

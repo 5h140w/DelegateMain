@@ -8,20 +8,38 @@
     gap: 30px;
 }
 
-.wrap_section .input_section{
-    width: 65%;
+.wrap_section .loading_section{
+    min-height: 60vh;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+}
+
+
+.wrap_section .input_section{
+    margin: 0 auto;
+    width: 65%;
+    margin: 25px 0 10px 0;
+    display: flex;
+    border: 1px solid #AAA;
 }
 
 .wrap_section input[type="number"]{
     padding: 22px 24px;
-    flex: 8;
     width: 100%;
+    border: 0;
 }
 .wrap_section .input_section>button{
-    flex: 2;
     cursor: pointer;
+    color: #000;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #1976d2;
+    padding: .5rem 1rem;
+    border-radius: 0;
+}
+
+.wrap_section .input_section>button.none{
+    display: none;
 }
 
 .wrap_section .wrap_btn{
@@ -30,6 +48,16 @@
     color: white;
     cursor: pointer;
 }
+
+
+.wrap_section .error_section{
+    text-align: center;
+}
+
+.wrap_section .error_section>*{
+    margin: 20px 0px;
+}
+
 
 @media only screen and (max-width: 992px){
     .wrap_section{
