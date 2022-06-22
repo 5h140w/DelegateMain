@@ -1,5 +1,6 @@
 .wrap_section{
     margin-top: 100px;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,5 +27,6 @@
 @media only screen and (max-width: 992px){
     .wrap_section{
         margin: 30px;
+        min-height: 100%;
     }
 }
