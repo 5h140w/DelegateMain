@@ -4,6 +4,7 @@ import AppState from '../../AppState'
 import { getSigner, wrap } from '../../logic/web3'
 import "./wrap_main.css"
 import loader from "../../loader.svg"
+import { NavLink } from 'react-router-dom'
 
 const Wrap_main = () =>{
     const context = useContext(AppState)
@@ -82,11 +83,14 @@ const Wrap_main = () =>{
                     </button>
                   </div>
                 ) : (
-                  <button>Go to delegate</button>
+                  <div className='success_section'>
+                    <h1>Success</h1>
+                    <p>You successfully wrap your token ! </p>
+                    <NavLink className="wrap_btn" to="/SGB/delegate">Go to delegate</NavLink>
+                  </div>
                 )
           }
-
-                  </div>
+        </div>
     )
 }
 
