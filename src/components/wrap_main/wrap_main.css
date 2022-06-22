@@ -10,11 +10,18 @@
 
 .wrap_section .input_section{
     width: 65%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.wrap_section input[type="text"]{
+.wrap_section input[type="number"]{
     padding: 22px 24px;
+    flex: 8;
     width: 100%;
+}
+.wrap_section .input_section>button{
+    flex: 2;
+    cursor: pointer;
 }
 
 .wrap_section .wrap_btn{
