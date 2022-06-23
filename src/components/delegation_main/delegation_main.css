@@ -21,3 +21,25 @@
 .delegation_section .loading_section>img{
     height: 300px;
 }
+
+
+
+.delegation_section .error_section,
+.delegation_section .success_section{
+    text-align: center;
+}
+
+.delegation_section .error_section>*,
+.delegation_section .success_section>*
+{
+    display: block;
+    margin: 30px auto;
+}
+
+.delegation_section .redirect_btn{
+    padding: 20px 60px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
