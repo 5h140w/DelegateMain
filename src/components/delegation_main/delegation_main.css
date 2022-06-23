@@ -13,3 +13,11 @@
 }
 
 
+.delegation_section .loading_section{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+.delegation_section .loading_section>img{
+    height: 300px;
+}

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Delegation_main from '../components/delegation_main/Delegation_main'
 import Navbar from '../components/navbar/Navbar'
 import SideBar from '../components/sidebar/Sidebar'
-import { getDelegations, getWnatBalance, undelegate } from '../logic/web3'
 
 const Delegations = () =>{
     return(

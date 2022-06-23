@@ -33,7 +33,10 @@ const Delegation_main = () =>{
         const result = await undelegate(from).catch(
             (e)=> {return e}
         )
-        setAppState({loading: false , result})
+
+        console.log(result)
+
+        setAppState({loading: false , delegations:[],result})
     }
     return(
         <div className={appState.delegations.length >0 ? "delegation_section list" : 'delegation_section'}>
@@ -44,7 +47,7 @@ const Delegation_main = () =>{
                     </div>
                 ) : !appState.result ?(
                     <>
-                        <h1>Your Delegations</h1>
+                        <h1 className='delegation_title'>Your Delegations</h1>
                         {
                             appState.delegations.length>0 ?(
                                 <>
@@ -52,11 +55,15 @@ const Delegation_main = () =>{
                                         appState.delegations.map(
                                             (delegation,index) =>{
                                                 return (
-                                                    <Delegation
-                                                        key={index}
-                                                        delegation={delegation}
-                                                        undelegate={UndelegateTx}
-                                                    />
+                                                    <>
+                                                        <Delegation
+                                                            key={index}
+                                                            balance ={balance}
+                                                            delegation={delegation}
+                                                            undelegate={UndelegateTx}
+                                                        />
+                                                    </>
+                                            
                                                 )
                                             }
                                         )
@@ -65,22 +72,32 @@ const Delegation_main = () =>{
                             ):(
                                 <>
                                     <h2>You don't have any delegation</h2>
-                                    <NavLink to="/SGB/delegate"> Delegate to Lena Instruments</NavLink>
+                                    <NavLink 
+                                        className="redirect_btn"
+                                        to="/SGB/delegate"
+                                    > 
+                                        Delegate to Lena Instruments
+                                    </NavLink>
                                 </>
                             )
                         }
                     </>
                 ): appState.result.code ?(
-                    <>
-                        <h2>Error</h2>
-                        <button onClick={UpdateAppState}> Try Again</button>
-                    </>
+                    <div className='error_section'>
+                        <h1>Error</h1>
+                        <button 
+                            onClick={UpdateAppState}
+                            className="redirect_btn"
+                        > 
+                            Try Again
+                        </button>
+                    </div>
                 ) :(
-                    <>
-                        <h2>Success</h2>
-                        <p>You successfully undelegate the token</p>
-                        <NavLink tp="/SGB/delegation"> GO back to delegations page</NavLink>
-                    </>
+                    <div className='success_section'>
+                        <h1>Success</h1>
+                        <h2>You successfully undelegate the token</h2>
+                        <NavLink className="redirect_btn" to="/SGB/delegation"> GO back to delegations page</NavLink>
+                    </div>
                 )
             }
         </div>
