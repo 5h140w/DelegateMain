@@ -61,7 +61,7 @@ const Wrap_main = () =>{
                       max={balance-0.5}
                     />
                     <button
-                      className={balance< 0.5 ? "" : "none"}
+                      className={balance<  0.5 ? "" : "none"}
                       onClick={setMax}> 
                       Max
                     </button>

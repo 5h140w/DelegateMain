@@ -9,19 +9,50 @@
 }
 
 .unwrap_section .input_section{
+    margin: 0 auto;
     width: 65%;
+    margin: 25px 0 10px 0;
+    display: flex;
+    border: 1px solid #AAA;
 }
 
-.unwrap_section input[type="text"]{
+.unwrap_section input[type="number"]{
     padding: 22px 24px;
     width: 100%;
+    border: 0;
 }
 
-.unwrap_section .wrap_btn{
+.unwrap_section .input_section>button{
+    cursor: pointer;
+    color: #000;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #1976d2;
+    padding: .5rem 1rem;
+    border-radius: 0;
+}
+
+.unwrap_section .input_section>button.none{
+    display: none;
+}
+
+.unwrap_section .unwrap_btn{
     padding: 20px 60px;
     background-color: black;
     color: white;
     cursor: pointer;
+}
+
+
+.unwrap_section .error_section,
+.unwrap_section .success_section{
+    text-align: center;
+}
+
+.unwrap_section .error_section>*,
+.unwrap_section .success_section>*
+{
+    margin: 20px 0px;
 }
 
 @media only screen and (max-width: 992px){
