@@ -17,16 +17,16 @@ const Navbar = () =>{
             </div>
             <ul className="menu_navbar">
                 <li>
-                    <a href="">Wrap</a>
+                    <a href="/SGB/wrap">Wrap</a>
                 </li>
                 <li>
-                    <a href="">Delegate</a>
+                    <a href="/SGB/delegate">Delegate</a>
                 </li>
                 <li>
-                    <a href="">Unwrap</a>
+                    <a href="/SGB/unwrap">Unwrap</a>
                 </li>
                 <li>
-                    <a href="">Your Delegations</a>
+                    <a href="/SGB/delegations">Your Delegations</a>
                 </li>
             </ul>
             <button className="btn_navbar">Logout</button>
