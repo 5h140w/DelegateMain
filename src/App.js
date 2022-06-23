@@ -6,7 +6,7 @@ import Welcome from './components/welcome/Welcome';
 import { Switch, Route, Redirect, BrowserRouter as Router} from 'react-router-dom';
 import Wrap from './pages/Wrap';
 import Unwrap from './pages/Unwrap';
-
+import Delegations from './pages/Delegations';
 
 function App() {
   const context = React.useContext(AppState)
@@ -20,6 +20,7 @@ function App() {
           <Switch>
             <Route path="/SGB/wrap" component={Wrap}/>
             <Route path="/SGB/unwrap" component={Unwrap}/>
+            <Route path="/SGB/delegation" component={Delegations}/>
             <Route>
               <Redirect to="/SGB/wrap"/>
             </Route>
