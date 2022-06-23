@@ -31,7 +31,10 @@ const Delegation_main = () =>{
     const UndelegateTx = async(from) =>{
         setAppState({loading:true , delegations:[]})
         const result = await undelegate(from).catch(
-            (e)=> {return e}
+            (e)=> {
+                console.log(e)
+                return e
+            }
         )
 
         console.log(result)
@@ -85,6 +88,7 @@ const Delegation_main = () =>{
                 ): appState.result.code ?(
                     <div className='error_section'>
                         <h1>Error</h1>
+                        <p>{appState.result.message}</p>
                         <button 
                             onClick={UpdateAppState}
                             className="redirect_btn"

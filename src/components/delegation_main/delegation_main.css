@@ -43,3 +43,10 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 992px){
+    .delegation_section{
+        margin: 30px;
+        min-height: 100%;
+    }
+}
