@@ -113,4 +113,7 @@
     .navbar.open .btn_navbar{
         display: block;
     }
+    .navbar .menu_navbar>li:after{
+        display: none;
+    }
 }
