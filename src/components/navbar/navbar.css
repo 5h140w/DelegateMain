@@ -31,8 +31,38 @@
 }
 
 .navbar .menu_navbar>li{
+    position:relative;
     margin: 0 20px;
     font-size: 17px;
+}
+
+.navbar .menu_navbar>li:after {
+  color: white;
+  font-size: 13px;
+  padding: 9px;
+  position: absolute;
+  bottom: -20px;
+  right: 50%;
+  transform: translateX(50%);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .menu_navbar>li:first-child:after{
+    content: "1";
+}
+.navbar .menu_navbar>li:nth-child(2):after{
+    content: "2";
+}
+.navbar .menu_navbar>li:nth-child(3):after{
+    content: "3";
+}
+.navbar .menu_navbar>li:last-child:after{
+    content: "4";
 }
 
 .menu_navbar>li a{
