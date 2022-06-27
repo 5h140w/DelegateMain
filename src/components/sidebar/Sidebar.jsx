@@ -12,8 +12,6 @@ const SideBar = () =>{
     const wsgbBalance = context.wsgbBalance
     const claimable = context.claimable
     const unclaimable = context.unclaimable
-    const [value,setValue] = useState("")
-
     const [rewardadd , setRewardadd] = useState(address)
     const SimpleAddress = address.substring(0,8) + "..." + address.substring(34)
 
