@@ -47,15 +47,15 @@ const SideBar = () =>{
             <div className='coin_section'>
                 <h1 className="subtitle">COINS</h1>
                 <div className="songBird">
-                    <img src={WSGBICON} alt="" />
+                    <img src={SGBICON} alt="" />
                     <span className="sonbirgName">SongBird</span>
-                    <span className="value">{sgbBalance}</span>
+                    <span className="value">{Number.parseFloat(sgbBalance).toFixed(2)}</span>
                     <span className="sbg">SGB</span>
                 </div>
                 <div className="WsongBird">
-                    <img src={SGBICON} alt="" />
+                    <img src={WSGBICON} alt="" />
                     <span className="WsonbirgName">SongBird</span>
-                    <span className="Wvalue">{wsgbBalance}</span>
+                    <span className="Wvalue">{Number.parseFloat(wsgbBalance).toFixed(2)}</span>
                     <span className="Wsbg">WSGB</span>
                 </div>
             </div>
