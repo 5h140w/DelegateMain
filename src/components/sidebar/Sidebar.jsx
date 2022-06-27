@@ -3,16 +3,16 @@ import "./sidebar.css"
 import WSGBICON from "../../assets/WSGB.png"
 import SGBICON from "../../assets/SGB.png"
 import AppState from '../../AppState'
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 const SideBar = () =>{
     const context = React.useContext(AppState)
-    const connected = context.connected
     const address = context.address
     const sgbBalance = context.sgbBalance.toFixed(6)
     const wsgbBalance = context.wsgbBalance
     const claimable = context.claimable
     const unclaimable = context.unclaimable
-    const msg = context.msg
+    const [value,setValue] = useState("")
 
     const [rewardadd , setRewardadd] = useState(address)
     const SimpleAddress = address.substring(0,8) + "..." + address.substring(34)
@@ -38,9 +38,12 @@ const SideBar = () =>{
                     <span className="subtitle">ADDRESS</span>
                     <div className="addressContent">
                         <p>{SimpleAddress}</p>
-                        <button className='copy_address'>
-                            <i className="far fa-copy"></i>
-                        </button>
+                        <CopyToClipboard text={address}
+                        >
+                            <button className='copy_address'>
+                                <i className="far fa-copy"></i>
+                            </button>
+                        </CopyToClipboard>
                     </div>
                 </div>
             </div>
