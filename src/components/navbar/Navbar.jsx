@@ -18,15 +18,19 @@ const Navbar = () =>{
             <ul className="menu_navbar">
                 <li>
                     <a href="/SGB/wrap">Wrap</a>
+                    <p className="numberSpan">1</p>
                 </li>
                 <li>
                     <a href="/SGB/delegate">Delegate</a>
+                    <p className="numberSpan">2</p>
                 </li>
                 <li>
                     <a href="/SGB/unwrap">Unwrap</a>
+                    <p className="numberSpan">3</p>
                 </li>
                 <li>
                     <a href="/SGB/delegations">Your Delegations</a>
+                    <p className="numberSpan">4</p>
                 </li>
             </ul>
             <button className="btn_navbar">Logout</button>
