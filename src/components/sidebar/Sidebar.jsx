@@ -46,7 +46,7 @@ const SideBar = () =>{
                 </div>
             </div>
             <div className='coin_section'>
-                <h1 className="subtitle">COINS</h1>
+                <h1 className="subtitle">ASSETS</h1>
                 <div className="songBird">
                     <img src={SGBICON} alt="" />
                     <span className="sonbirgName">SongBird</span>
