@@ -72,11 +72,17 @@ const SideBar = () =>{
                         onChange={(e)=>setRewardadd(e.target.value)}
                     />
                     <div className='unclaimed_rewards'>
-                        <p>Unclaimed Rewards</p>
+                        <div>
+                            <p>Unclaimed Rewards</p>
+                            <p>(from Previous epochs)</p>
+                        </div>
                         <p> {Number.parseFloat(claimable).toFixed(2)} SGB</p>
                     </div>
                     <div className='pending_rewards'>
-                        <p>Pending Rewards</p>
+                        <div>
+                            <p>Pending Rewards</p>
+                            <p>(from current epochs)</p>
+                        </div>
                         <p> {Number.parseFloat(unclaimable).toFixed(2)} WSGB</p>
                     </div>
                 </div>
