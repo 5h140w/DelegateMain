@@ -19,10 +19,8 @@
     align-items: center;
 }
 .delegation_section .loading_section>img{
-    height: 300px;
+    height: 200px;
 }
-
-
 
 .delegation_section .error_section,
 .delegation_section .success_section{
