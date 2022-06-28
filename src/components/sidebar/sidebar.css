@@ -52,9 +52,11 @@
     width: 100%;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 100px 100px 100px 100px;
     background-color: white;
-    text-align: center;
+    justify-items: center;
+    align-items: center;
+    text-align: start;
 }
 
 .songBird>img ,.WsongBird>img {
