@@ -63,7 +63,7 @@ const SideBar = () =>{
             <div className='statistics_section'>
                 <h1 className="subtitle">STATISTICS</h1>
                 <div className='statistics_content'>
-                    <p className="labelInput">Address for receive reward :</p>
+                    <p className="labelInput">Claim your rewards to the below address:</p>
                     <input 
                         className="inputtext" 
                         type="text" 
