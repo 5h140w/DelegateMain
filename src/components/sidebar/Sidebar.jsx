@@ -55,7 +55,7 @@ const SideBar = () =>{
                 </div>
                 <div className="WsongBird">
                     <img src={WSGBICON} alt="" />
-                    <span className="WsonbirgName">SongBird</span>
+                    <span className="WsonbirgName">WSongBird</span>
                     <span className="Wvalue">{Number.parseFloat(wsgbBalance).toFixed(2)}</span>
                     <span className="Wsbg">WSGB</span>
                 </div>
