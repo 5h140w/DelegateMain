@@ -75,8 +75,15 @@
     padding: 20px 10px;
     width: 100%;
     margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    font-size: 15px;
 }
+.statistics_section input[type="text"].inputtext:active,
+.statistics_section input[type="text"].inputtext:focus{
+    border: 3px solid black;
 
+}
 .statistics_section .statistics_content{
     background-color: white;
     padding: 20px 0px;

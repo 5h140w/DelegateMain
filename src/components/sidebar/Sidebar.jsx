@@ -35,7 +35,7 @@ const SideBar = () =>{
                 <div className="address_section">
                     <span className="subtitle">ADDRESS</span>
                     <div className="addressContent">
-                        <p>{SimpleAddress}</p>
+                        <p style={{fontSize:"15px"}}>{SimpleAddress}</p>
                         <CopyToClipboard text={address}
                         >
                             <button className='copy_address'>
@@ -73,11 +73,11 @@ const SideBar = () =>{
                     />
                     <div className='unclaimed_rewards'>
                         <p>Unclaimed Rewards</p>
-                        <p> {claimable} SGB</p>
+                        <p> {Number.parseFloat(claimable).toFixed(2)} SGB</p>
                     </div>
                     <div className='pending_rewards'>
                         <p>Pending Rewards</p>
-                        <p> {unclaimable} WSGB</p>
+                        <p> {Number.parseFloat(unclaimable).toFixed(2)} WSGB</p>
                     </div>
                 </div>
             </div>
