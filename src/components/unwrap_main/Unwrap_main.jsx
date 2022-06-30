@@ -55,7 +55,7 @@ const Unwrap_main = () =>{
               <div className='input_section'>
               <input 
                 type="number" 
-                placeholder="Wrap your SGB"
+                placeholder="Unwrap your SGB"
                 id="unwrap_amount"
                 min={0}
                 max={balance}
