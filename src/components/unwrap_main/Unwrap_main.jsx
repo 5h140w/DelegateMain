@@ -32,6 +32,7 @@ const Unwrap_main = () =>{
             return e
           }
         )
+        console.log(result)
         const balance = await getWnatBalance()
         setBalance(balance)
         context.reset()
@@ -69,7 +70,7 @@ const Unwrap_main = () =>{
               </div>
               <button className='unwrap_btn' onClick={UnwrapTx}>UnWrap</button>
             </>      
-          ) : appState.result.error.code.dsfsdf ?(
+          ) : appState.result.error.code ?(
             <div className='error_section'>
               <h1>Error</h1>
               <p>
