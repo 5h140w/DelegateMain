@@ -28,11 +28,9 @@ const Unwrap_main = () =>{
         setAppState({loading: true})
         const result = await unwrap(unwrap_amount).catch(
           (e) =>{
-            console.log(e.error.data.message)
             return e
           }
         )
-        console.log(result)
         const balance = await getWnatBalance()
         setBalance(balance)
         context.reset()
@@ -70,12 +68,12 @@ const Unwrap_main = () =>{
               </div>
               <button className='unwrap_btn' onClick={UnwrapTx}>UnWrap</button>
             </>      
-          ) : appState.result.error.code ?(
+          ) : appState.result.code ?(
             <div className='error_section'>
               <h1>Error</h1>
               <p>
                 {
-                  appState.result.error.data.message
+                  (appState.result.code ===4001) ? appState.result.message : appState.result.code
                 }
               </p>
               <button

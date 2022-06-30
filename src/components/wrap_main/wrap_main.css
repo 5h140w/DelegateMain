@@ -60,7 +60,7 @@
 .wrap_section .error_section>*,
 .wrap_section .success_section>*
 {
-    margin: 20px 0px;
+    margin: 20px auto;
     display: block;
 }
 
