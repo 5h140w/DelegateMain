@@ -83,7 +83,7 @@ const SideBar = () =>{
                             <p>Pending Rewards</p>
                             <p>(from current epochs)</p>
                         </div>
-                        <p> {Number.parseFloat(unclaimable).toFixed(2)} WSGB</p>
+                        <p> {Number.parseFloat(unclaimable).toFixed(2)} SGB</p>
                     </div>
                 </div>
             </div>
