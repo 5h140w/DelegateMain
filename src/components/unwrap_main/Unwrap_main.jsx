@@ -51,7 +51,7 @@ const Unwrap_main = () =>{
             </div>
           ): !appState.result ?(
             <>
-              <h1> UnWrap</h1>
+              <h1> Unwrap</h1>
               <div className='input_section'>
               <input 
                 type="number" 
