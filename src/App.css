@@ -9,6 +9,10 @@
     justify-content: space-between;
 }
 
+a{
+    text-decoration: none;
+}
+
 .main .left_section{
     flex:1;
 }

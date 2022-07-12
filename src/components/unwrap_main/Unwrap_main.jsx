@@ -3,6 +3,7 @@ import "./unwrap_main.css"
 import AppState from '../../AppState'
 import { getWnatBalance, unwrap } from '../../logic/web3'
 import loader from "../../loader.svg"
+import { NavLink } from 'react-router-dom'
 
 const Unwrap_main = () =>{
 
@@ -87,12 +88,12 @@ const Unwrap_main = () =>{
             <div className='success_section'>
               <h1>Success</h1>
               <p>You successfully unwrapped your tokens ! </p>
-              <button
+              <NavLink
                 className="unwrap_btn"
-                onClick={() => setAppState({ loading: false })}
+                to="/SGB/wrap"
               >
-                Refresh the page
-              </button>
+                Go to wrap
+              </NavLink>
             </div>
           )
         }
