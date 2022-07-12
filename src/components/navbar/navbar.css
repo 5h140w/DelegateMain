@@ -48,6 +48,7 @@
     justify-content: center;
     font-size: 13px;
     align-items: center;
+    cursor: pointer;
 }
 
 .menu_navbar>li a{
