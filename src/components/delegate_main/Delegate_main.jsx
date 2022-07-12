@@ -21,7 +21,7 @@ const Delegate_main = () =>{
                 const available = await getAvailableDelegations()
                 const delegated = await getLenaDelegations()
                 setdelegation({balance,available,delegated})
-                setAppState({loading:true , amount:available})
+                setAppState({loading:false , amount:available})
             }
             getInfos()
         },[]
