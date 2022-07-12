@@ -18,7 +18,7 @@ const Unwrap_main = () =>{
             setAppState({loading:true})
             const balance = await getWnatBalance()
             setBalance(balance)
-            setAppState({loading : false})
+            setAppState({loading : true})
           }
           getBalance()
       },[]
