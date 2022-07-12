@@ -86,7 +86,7 @@ const Unwrap_main = () =>{
           ) :(
             <div className='success_section'>
               <h1>Success</h1>
-              <p>You successfully unwrap your token ! </p>
+              <p>You successfully unwrapped your tokens ! </p>
               <button
                 className="unwrap_btn"
                 onClick={() => setAppState({ loading: false })}
