@@ -106,6 +106,8 @@
     cursor: pointer;
 }
 
-.statistics_content .pending_rewards>div .period{
-    font-style: italic;    
+.statistics_content .pending_rewards>div .period,
+.statistics_content .unclaimed_rewards>div .period{
+    font-style: italic; 
+    font-weight: 600;   
 }
