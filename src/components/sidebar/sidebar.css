@@ -93,6 +93,7 @@
     margin:20px 0px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .sidebar_container .claim_btn{
@@ -103,4 +104,8 @@
     width: 175px;
     margin: 0 auto;
     cursor: pointer;
+}
+
+.statistics_content .pending_rewards>div .period{
+    font-style: italic;    
 }
