@@ -51,6 +51,10 @@
     cursor: pointer;
 }
 
+.navbar .menu_navbar>li .numberSpan:hover{
+    background-color: #000;
+}
+
 .menu_navbar>li a{
     text-decoration: none;
     color: black;
