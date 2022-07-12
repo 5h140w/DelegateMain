@@ -18,7 +18,7 @@ const Wrap_main = () =>{
           setAppState({loading:true})
           const balance = parseFloat( ethers.utils.formatUnits(await getSigner().getBalance() , 18))
           setbalance(balance)
-          setAppState({loading: true})
+          setAppState({loading: false})
         }
         getBalance()
       },[]

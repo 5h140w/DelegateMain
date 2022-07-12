@@ -6,20 +6,26 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    position: relative;
 }
 
 .delegation_section.list{
     justify-content: flex-start;
 }
 
-
 .delegation_section .loading_section{
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
+    position: relative;
 }
-.delegation_section .loading_section>img{
-    height: 200px;
+.delegation_section .loading_section>.load{
+    height: 225px;
+    width: 225px;
+}
+
+.delegation_section .loading_section>.logo{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100px;
 }
 
 .delegation_section .error_section,

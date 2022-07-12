@@ -2,6 +2,7 @@ import React, {useEffect , useState }from 'react'
 import "./delegation_main.css"
 import { getWnatBalance , getDelegations , undelegate } from '../../logic/web3'
 import loader from "../../loader.svg"
+import Logo from "../../logo.svg"
 import { NavLink } from 'react-router-dom'
 import Delegation from '../delegation/Delegation'
 
@@ -42,11 +43,12 @@ const Delegation_main = () =>{
         setAppState({loading: false , delegations:[],result})
     }
     return(
-        <div className={appState.delegations.length >0 ? "delegation_section list" : 'delegation_section'}>
+        <div className={appState.delegations.length >0 && !appState.loading ? "delegation_section list" : 'delegation_section'}>
             {
                 appState.loading ? (
                     <div className='loading_section'>
-                        <img alt="loading" src={loader}/>
+                        <img alt="loading" src={loader} className="load"/>
+                        <img alt="logo" src={Logo} className="logo"/>
                     </div>
                 ) : !appState.result ?(
                     <>
