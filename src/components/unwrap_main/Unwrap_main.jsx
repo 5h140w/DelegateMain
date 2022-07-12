@@ -3,6 +3,7 @@ import "./unwrap_main.css"
 import AppState from '../../AppState'
 import { getWnatBalance, unwrap } from '../../logic/web3'
 import loader from "../../loader.svg"
+import Logo from "../../logo.svg"
 import { NavLink } from 'react-router-dom'
 
 const Unwrap_main = () =>{
@@ -17,7 +18,7 @@ const Unwrap_main = () =>{
             setAppState({loading:true})
             const balance = await getWnatBalance()
             setBalance(balance)
-            setAppState({loading : false})
+            setAppState({loading : true})
           }
           getBalance()
       },[]
@@ -48,7 +49,8 @@ const Unwrap_main = () =>{
         {
           appState.loading ? (
             <div className='loading_section'>
-              <img alt="loading" src={loader}/>
+              <img alt="loading" src={loader} className="load"/>
+              <img alt="logo" src={Logo} className="logo"/>
             </div>
           ): !appState.result ?(
             <>

@@ -8,6 +8,22 @@
     gap: 30px;
 }
 
+.unwrap_section .loading_section{
+    position: relative;
+}
+.unwrap_section .loading_section>.load{
+    height: 225px;
+    width: 225px;
+}
+
+.unwrap_section .loading_section>.logo{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100px;
+}
+
+
 .unwrap_section .input_section{
     margin: 0 auto;
     width: 65%;
