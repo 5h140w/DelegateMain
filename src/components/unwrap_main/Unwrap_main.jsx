@@ -73,7 +73,7 @@ const Unwrap_main = () =>{
               <h1>Error</h1>
               <p>
                 {
-                  (appState.result.code ===4001) ? appState.result.message : appState.result.code
+                  (appState.result.code ===4001) ? appState.result.message : "You attempted to unwrap more than your current WSGB balance, try to unwrap less"
                 }
               </p>
               <button
