@@ -4,6 +4,7 @@ import AppState from '../../AppState'
 import { getSigner, wrap } from '../../logic/web3'
 import "./wrap_main.css"
 import loader from "../../loader.svg"
+import Logo from "../../logo.svg"
 import { NavLink } from 'react-router-dom'
 
 const Wrap_main = () =>{
@@ -17,7 +18,7 @@ const Wrap_main = () =>{
           setAppState({loading:true})
           const balance = parseFloat( ethers.utils.formatUnits(await getSigner().getBalance() , 18))
           setbalance(balance)
-          setAppState({loading: false})
+          setAppState({loading: true})
         }
         getBalance()
       },[]
@@ -46,7 +47,8 @@ const Wrap_main = () =>{
             appState.loading ? 
               (
                 <div className='loading_section'>
-                  <img alt="loading" src={loader}/>
+                  <img alt="loading" src={loader} className="load"/>
+                  <img alt="logo" src={Logo} className="logo"/>
                 </div>
               )
               : !appState.result ?

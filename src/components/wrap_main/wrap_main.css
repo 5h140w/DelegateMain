@@ -6,17 +6,22 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    position: relative;
 }
 
 .wrap_section .loading_section{
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
+    position: relative;
 }
-.wrap_section .loading_section>img{
-    height: 200px;
+.wrap_section .loading_section>.load{
+    height: 225px;
+    width: 225px;
 }
-
+.wrap_section .loading_section>.logo{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100px;
+}
 .wrap_section .input_section{
     margin: 0 auto;
     width: 65%;
