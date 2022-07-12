@@ -9,13 +9,21 @@
 }
 
 .delegate_section .loading_section{
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
+    position: relative;
 }
-.delegate_section .loading_section>img{
-    height: 200px;
+
+.delegate_section .loading_section>.load{
+    height: 225px;
+    width: 225px;
 }
+
+.delegate_section .loading_section>.logo{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100px;
+}
+
 
 .delegate_section .delegate_btn{
     padding: 20px 60px;

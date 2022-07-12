@@ -4,6 +4,7 @@ import AppState from '../../AppState'
 import { delegate, getAvailableDelegations, getLenaDelegations, getWnatBalance } from '../../logic/web3'
 import "./delegate_main.css"
 import loader from "../../loader.svg"
+import Logo from "../../logo.svg"
 
 
 const Delegate_main = () =>{
@@ -20,7 +21,7 @@ const Delegate_main = () =>{
                 const available = await getAvailableDelegations()
                 const delegated = await getLenaDelegations()
                 setdelegation({balance,available,delegated})
-                setAppState({loading:false , amount:available})
+                setAppState({loading:true , amount:available})
             }
             getInfos()
         },[]
@@ -42,7 +43,8 @@ const Delegate_main = () =>{
             {
                 appState.loading ? (
                     <div className='loading_section'>
-                        <img alt="loading" src={loader}/>
+                        <img alt="loading" src={loader} className="load"/>
+                        <img alt="logo" src={Logo} className="logo"/>
                     </div>
                 ):!appState.result ?(
                     <>
