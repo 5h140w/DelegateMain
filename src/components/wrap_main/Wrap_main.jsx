@@ -85,7 +85,7 @@ const Wrap_main = () =>{
                 ) : (
                   <div className='success_section'>
                     <h1>Success</h1>
-                    <p>You successfully wrap your token ! </p>
+                    <p>You successfully wrapped your tokens ! </p>
                     <NavLink className="wrap_btn" to="/SGB/delegate">Go to delegate</NavLink>
                   </div>
                 )
