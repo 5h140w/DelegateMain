@@ -73,14 +73,14 @@ const SideBar = () =>{
                     />
                     <div className='unclaimed_rewards'>
                         <div>
-                            <p>Unclaimed Rewards</p>
+                            <p>Unclaimed rewards</p>
                             <p className='period'>from Previous epochs</p>
                         </div>
                         <p> {Number.parseFloat(claimable).toFixed(2)} SGB</p>
                     </div>
                     <div className='pending_rewards'>
                         <div>
-                            <p>Pending Rewards</p>
+                            <p>Pending rewards</p>
                             <p className='period'>from current epochs</p>
                         </div>
                         <p> {Number.parseFloat(unclaimable).toFixed(2)} SGB</p>
