@@ -70,6 +70,7 @@
 
 .statistics_section .labelInput{
     margin: 6px 0px;
+    padding: 0 20px;
 }
 .statistics_section input[type="text"].inputtext{
     padding: 20px 10px;
