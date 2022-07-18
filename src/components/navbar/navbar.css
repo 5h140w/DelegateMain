@@ -59,6 +59,8 @@
     text-decoration: none;
     color: black;
     cursor: pointer;
+    font-family: "Lena";
+    font-weight: 400;
 }
 
 .menu_navbar>li a:hover{
